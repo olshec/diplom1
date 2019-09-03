@@ -1,0 +1,49 @@
+IPv4, IPv6
+
+df
+
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+
+
+sudo apt-get install apache2 php mysql-client mysql-server curl libgd2 mcrypt simplexml
+
+
+Site address	
+http://34.97.122.149/ 
+Admin URL	
+http://34.97.122.149/admin/ 
+Admin user	
+user
+Admin password (Temporary)	
+YNerzVyKAu1K
+Instance	
+opencart-1-vm
+Instance zone	
+asia-northeast2-c
+Instance machine type	
+f1-micro
+
+56d9
+9172
+8ba2
+0361
+4d61
+3c21
+6a69
+1840
+0620
+dbf8
+4948
+b996
+125b
+a200
+d07e
+3cd3
+
+1 25064 ₽ideveloper.website1 45064 ₽getsite.site1 25064 ₽getsite.website
+buyweb.siteПремиум
+
+
+1 25064 ₽ideveloper.website1 45064 ₽w3studio.site1 45064 ₽w3dev.site1 25064 ₽w3dev.website

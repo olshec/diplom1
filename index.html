@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Cache-Control" content="no-store" />
 
   <title>Landing &mdash; Free One Page Bootstrap 4 Template by uicookies.com</title>
   <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
@@ -62,7 +63,7 @@
   <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
     id="section-home">
     <div class="container">
-      <!-- <br> <br> <br> <br> --><br><br>
+      <!-- <br> <br> <br>--> <br> <br><br>
       <div class="row align-items-center justify-content-center">
         <div class="col-md-6">
           <h2 class="heading mb-3">Дипломные работы на заказ</h2>
@@ -77,13 +78,15 @@
         </div>
         <div class="col-md-5 relative align-self-center " style="display: block">
 
-          <form action="#" class="bg-white rounded pb_form_v1 ">
+          <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
             <h2 class="mb-4 mt-0 text-center">Оценить работу</h2>
             <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя">
+              <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя" 
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите имя')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" placeholder="Email">
+              <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" 
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
             </div>
 
             <div class="form-group">
@@ -111,7 +114,8 @@
 
      
             <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse " placeholder="Введите код на риснке">
+              <input type="text" class="form-control pb_height-50 reverse" name="captcha_code" placeholder="Введите код на рисунке" 
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите код')">
             </div>
             <div class="form-group">
               <img src="captcha_code.php" />
@@ -683,7 +687,7 @@
         $("#section-home").css({ "height": heightFull });
       }
     }
-    heightFull = 900;
+    heightFull = 1000;
     heightMobile = 1300;
 
     $(document).ready(function () {
@@ -693,6 +697,14 @@
       $('#inputGroupFile01').inputFileText({
         text: 'Select File'
       });
+
+      $(".pb_slant-light:after").css(
+          "z-index", "-10"
+        );
+        $(".pb_slant-white:after").css(
+          "z-index", "-10"
+        );
+
     });
 
     $(window).resize(function () {
@@ -716,8 +728,6 @@
       //  // $("#name1").val($(this).val());
       //   $("#name1").val('sd');
       // });
-
-
     })
 
     document.getElementById('file1').onchange =
