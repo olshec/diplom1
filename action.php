@@ -34,7 +34,7 @@ $mail = new PHPMailer(true);
 
 try {
 
-    $mail->setFrom('diplom.website@yandex.ru', 'Mailer');
+    $mail->setFrom('diplom.website@yandex.ru', 'Diplom');
     $mail->addAddress($to, 'Joe User');    
     // Attachments
     $mail->addAttachment($file_tmp, $file_name);         // Add attachments
@@ -55,12 +55,12 @@ try {
 if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
     $_SESSION["captcha_code"]=null;
 
-    echo 'right';
+    echo '<br> right';
 }
 else
 {
     $_SESSION["captcha_code"]=null;
-    echo 'wrong';
+    echo '<br> wrong';
 }
     
 ?>
