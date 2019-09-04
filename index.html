@@ -81,20 +81,20 @@
           <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
             <h2 class="mb-4 mt-0 text-center">Оценить работу</h2>
             <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя" 
+              <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя" name="name"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите имя')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" 
+              <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
             </div>
 
             <div class="form-group">
                 <div class="pb_select-wrap">
-                  <select class="form-control pb_height-50 reverse">
+                  <select class="form-control pb_height-50 reverse" name="typeSelect">
                     <option value="" selected>Тип работы</option>
-                    <option value="">Бакалавр</option>
-                    <option value="">Магистратура</option>
+                    <option value="bachelor">Бакалавр</option>
+                    <option value="master">Магистратура</option>
                   </select>
                 </div>
               </div>
@@ -105,7 +105,7 @@
             </div>
 
             <div class="form-group">
-                <textarea class="form-control pb_height-150 reverse" placeholder="Краткое описание" 
+                <textarea class="form-control pb_height-150 reverse" placeholder="Краткое описание" name="message"
                 value="Краткое описание"></textarea>
               <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
             </div>
@@ -115,7 +115,7 @@
      
             <div class="form-group">
               <input type="text" class="form-control pb_height-50 reverse" name="captcha_code" placeholder="Введите код на рисунке" 
-              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите код')">
+               required=""   oninvalid="this.setCustomValidity('Пожалуйста введите код')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
               <img src="captcha_code.php" />
@@ -679,16 +679,23 @@
 
   <script>
 
+	heightFull = 1000;
+	heightMobile1 = 1300;
+	heightMobile2 = 1500;
+	
     function setHeight() {
-      if ($(window).width() <= 767) {
-        $("#section-home").css({ "height": heightMobile });
+      if ($(window).width() <= 800) {
+    	  if ($(window).width() <= 376) {
+    	         $("#section-home").css({ "height": heightMobile2 });
+    	        }
+    	  else
+        	$("#section-home").css({ "height": heightMobile1 });
       }
       else {
         $("#section-home").css({ "height": heightFull });
       }
     }
-    heightFull = 1000;
-    heightMobile = 1300;
+    
 
     $(document).ready(function () {
       //console.log( "ready!" );

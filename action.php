@@ -10,16 +10,26 @@ $target_file = __DIR__."/uploadedFiles/".$_FILES["file1"]["name"];
 move_uploaded_file($_FILES["file1"]["tmp_name"], $target_file);
 
 if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
-    $random_alpha = md5(rand());
-    $captcha_code = substr($random_alpha, 0, 6);
-    $_SESSION["captcha_code"]=$captcha_code;
+    $_SESSION["captcha_code"]=null;
+
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "diplom.website@yandex.ru";
+    $to = $_POST['email'];
+    $subject = $_POST['typeSelect']['value'];
+    $message = $_POST['message'];
+    $headers = "From:" . $from;
+    $res = mail($to,$subject,$message, $headers);
+    if($res)
+        echo 'Сообщение успешно отправлено!'."<br>";
+    else
+        echo 'Нам не удалось отправить сообщение. Попытайтесь позже.'."<br>";
+
     echo 'right';
 }
 else
 {
-    $random_alpha = md5(rand());
-    $captcha_code = substr($random_alpha, 0, 6);
-    $_SESSION["captcha_code"]=$captcha_code;
+    $_SESSION["captcha_code"]=null;
     echo 'wrong';
 }
     
