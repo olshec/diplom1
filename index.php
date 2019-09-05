@@ -1,17 +1,4 @@
-<?php
 
-
-use Gregwar\Captcha\CaptchaBuilder;
-
-require './vendor/autoload.php';
-
-session_start();
-
-$captcha = new CaptchaBuilder;
-$captcha->build();
-$_SESSION['captcha_code'] = $captcha->getPhrase();
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +33,21 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
 </head>
+
+<?php
+
+
+use Gregwar\Captcha\CaptchaBuilder;
+
+require './vendor/autoload.php';
+
+session_start();
+
+$captcha = new CaptchaBuilder;
+$captcha->build();
+$_SESSION['captcha_code'] = $captcha->getPhrase();
+
+?>
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
