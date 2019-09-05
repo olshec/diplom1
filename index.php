@@ -50,7 +50,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
   <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Дипломы на заказ</a>
+      <a class="navbar-brand" href="index.php">Дипломы на заказ</a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar"
         aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="ion-navicon"></i></span>
