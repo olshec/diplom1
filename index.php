@@ -1,3 +1,18 @@
+<?php
+
+
+use Gregwar\Captcha\CaptchaBuilder;
+
+require './vendor/autoload.php';
+
+session_start();
+
+$captcha = new CaptchaBuilder;
+$captcha->build();
+$_SESSION['captcha_code'] = $captcha->getPhrase();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,33 +46,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
 </head>
-
-<?php
-
-//$builder = new CaptchaBuilder;
-//$builder->build();
-use Gregwar\Captcha\CaptchaBuilder;
-//use Gregwar\Captcha\PhraseBuilder;
-require './vendor/autoload.php';
-
-session_start();
-// Will build phrases of 5 characters, only digits
-//$phraseBuilder = new PhraseBuilder(5, '0123456789');
-
-// Pass it as first argument of CaptchaBuilder, passing it the phrase
-// builder
-
-$captcha = new CaptchaBuilder;
-$captcha->build();
-$_SESSION['captcha_code'] = $captcha->getPhrase();
-// $captcha = new CaptchaBuilder('hello');
-// $captcha->setBackgroundColor(255, 255, 255);
-// $captcha->build(150,40);
-
-// $path=__DIR__.'/capt.jpg';
-// $captcha->save('capt.jpg');
-// $path=__DIR__.'/capt.jpg';
-?>
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
