@@ -1,6 +1,6 @@
 {
     "require": {
         "phpmailer/phpmailer": "^6.0",
-        "google/recaptcha": "^1.2"
+	"gregwar/captcha": "1.*"
     }
 }

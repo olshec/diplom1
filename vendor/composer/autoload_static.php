@@ -7,24 +7,32 @@ namespace Composer\Autoload;
 class ComposerStaticInit65a49e37584aac5a0e738d4de8b398af
 {
     public static $prefixLengthsPsr4 = array (
-        'R' => 
+        'S' => 
         array (
-            'ReCaptcha\\' => 10,
+            'Symfony\\Component\\Finder\\' => 25,
         ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'G' => 
+        array (
+            'Gregwar\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'ReCaptcha\\' => 
+        'Symfony\\Component\\Finder\\' => 
         array (
-            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+            0 => __DIR__ . '/..' . '/symfony/finder',
         ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
     );
 
