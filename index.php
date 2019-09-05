@@ -1,18 +1,16 @@
-
 <?php
+session_start();
 
 use Gregwar\Captcha\CaptchaBuilder;
 
 require './vendor/autoload.php';
 
-session_start();
-
 $captcha = new CaptchaBuilder;
 $captcha->build();
+
 $_SESSION['captcha_code'] = $captcha->getPhrase();
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,8 +69,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
     </div>
   </nav>
   <!-- END nav -->
-
-
+  
 
 
   <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"

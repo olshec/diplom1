@@ -1,18 +1,19 @@
 <?php
+session_start();
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require './vendor/autoload.php';
 
-session_start();
 
 
 
-
+echo 'SESSION["captcha_code"] = '.$_SESSION["captcha_code"].'<br>';
+echo "POST[captcha_code] = ".$_POST["captcha_code"].'<br>';
 if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
     $_SESSION["captcha_code"]=null;
-
     
     //myData
     $file_tmp=$_FILES["file1"]["tmp_name"];
@@ -38,7 +39,6 @@ if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
     } catch (Exception $e) {
         echo "Не удалось отправить сообщение. Ошибка: {$mail->ErrorInfo}";
     }
- 
     
 }
 else
@@ -46,5 +46,7 @@ else
     $_SESSION["captcha_code"]=null;
     echo '<br> Код введен неверно, попытайтесь еще раз.';
 }
+
+session_destroy();
     
 ?>
