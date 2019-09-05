@@ -23,28 +23,21 @@ session_start();
 //myData
 $file_tmp=$_FILES["file1"]["tmp_name"];
 $file_name=$_FILES["file1"]["name"];
-$from = "diplom.website@yandex.ru";
+$from_email = "diplom.website@yandex.ru";
 $to = $_POST['email'];
 $subject = $_POST['typeSelect'];
 $message = $_POST['message'];
-$headers = "From:" . $from;
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
 try {
 
-    $mail->setFrom('diplom.website@yandex.ru', 'Diplom');
-    $mail->addAddress($to, 'Joe User');    
-    // Attachments
-    $mail->addAttachment($file_tmp, $file_name);         // Add attachments
-    
-    // Content
-    //$mail->isHTML(true);                                  // Set email format to HTML
+    $mail->setFrom($from_email, 'Diplom');
+    $mail->addAddress($to);    
+    $mail->addAttachment($file_tmp, $file_name);        
     $mail->Subject = $subject;
     $mail->Body    = $message;
-    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-    
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
@@ -55,12 +48,12 @@ try {
 if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
     $_SESSION["captcha_code"]=null;
 
-    echo '<br> right';
+    echo '<br> captcha right';
 }
 else
 {
     $_SESSION["captcha_code"]=null;
-    echo '<br> wrong';
+    echo '<br> captcha wrong';
 }
     
 ?>
