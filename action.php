@@ -19,11 +19,11 @@ $message = $_POST['message'];
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
-
+$mail->CharSet = 'UTF-8';
 try {
     
     $mail->setFrom($from_email, 'Diplom');
-    $mail->addAddress($to, 'John');
+    $mail->addAddress($to);
     $mail->addAttachment($file_tmp, $file_name);
     $mail->Subject = $subject;
     $mail->Body    = $message;
