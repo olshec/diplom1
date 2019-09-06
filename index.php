@@ -25,7 +25,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <meta name="keywords"
     content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
 
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400"
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:500,500i,600|Montserrat:200,300,500"
     rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -75,7 +75,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
     id="section-home">
     <div class="container">
-      <!-- <br> <br> <br>--> <br> <br><br>
+      <!-- <br> <br> <br>--> 
       <div class="row align-items-center justify-content-center">
         <div class="col-md-6">
           <h2 class="heading mb-3">Дипломные работы на заказ</h2>
@@ -89,9 +89,9 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-1">
         </div>
         <div class="col-md-5 relative align-self-center " style="display: block">
-
+        <br> <br> <br> <br>
           <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
-            <h2 class="mb-4 mt-0 text-center">Оценить работу</h2>
+            <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
             <div class="form-group">
               <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя" name="name"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите имя')" oninput="setCustomValidity('')">
@@ -103,7 +103,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
             <div class="form-group">
                 <div class="pb_select-wrap">
-                  <select class="form-control pb_height-50 reverse" name="typeSelect">
+                  <select class="form-control pb_height-50 reverse" name="typeSelect" >
                     <option value="" selected>Тип работы</option>
                     <option value="bachelor">Бакалавр</option>
                     <option value="master">Магистратура</option>
@@ -112,13 +112,13 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
               </div>
 
             <div class="form-group">
-                <input type="text" class="form-control pb_height-50 reverse" id="nameFile" placeholder="Выберите файл">
+                <input type="text" class="form-control pb_height-50 reverse" id="nameFile" placeholder="Выберите файл" >
                 <input type="file" id="file1" name="file1" style="display:none" />
             </div>
 
             <div class="form-group">
-                <textarea class="form-control pb_height-150 reverse" placeholder="Краткое описание" name="message"
-                value="Краткое описание"></textarea>
+                <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
+                value="Краткое описание" ></textarea>
               <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
             </div>
 
@@ -605,7 +605,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-5 justify-content-center">
-          <h2 class="heading mb-5 pb_font-40">Join over 1M+ people who uses Instant App</h2>
+          <h2 class="heading mb-5 pb_font-50">Join over 1M+ people who uses Instant App</h2>
           <div class="sub-heading">
             <p class="mb-4">New free template by <a href="http://uicookies.com" target="_blank">uicookies.com</a>. For
               more templates visit the <a href="http://uicookies.com" target="_blank">site</a>. Lorem ipsum dolor sit

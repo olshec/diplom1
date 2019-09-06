@@ -10,8 +10,10 @@ require './vendor/autoload.php';
 
 
 
-echo 'SESSION["captcha_code"] = '.$_SESSION["captcha_code"].'<br>';
-echo "POST[captcha_code] = ".$_POST["captcha_code"].'<br>';
+// echo 'SESSION["captcha_code"] = '.$_SESSION["captcha_code"].'<br>';
+// echo "POST[captcha_code] = ".$_POST["captcha_code"].'<br>';
+
+
 if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
     $_SESSION["captcha_code"]=null;
     
