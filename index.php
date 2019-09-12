@@ -50,7 +50,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
   <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.php">Дипломы на заказ</a>
+      <a class="navbar-brand" href="index.php">Диплом</a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar"
         aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="ion-navicon"></i></span>
@@ -73,15 +73,15 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 <!-- pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light -->
 
 <!-- pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8 -->
-  <section class="pb_section overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
+  <section class="pb_cover_v4 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
     id="section-home">
     <div class="container">
       <!-- <br> <br> <br>--> 
-      <div class="row align-items-center justify-content-center"  style="color: white;">
+      <div class="row align-items-center justify-content-center">
         <div class="col-md-6">
-          <h2 class="heading mb-3">Дипломные работы на заказ</h2>
+          <h2 class="heading mb-3" style="font-size: 3em;">Заказать дипломную работу</h2>
           <div class="sub-heading">
-            <p class="mb-4">Выполнение дипломных работ по программированию, информатике, автоматизированным системам.
+            <p class="mb-4">Выполнение дипломных работ по программированию, информатике, автоматизированным системам и базам данных.
             </p>
             <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-pricing"><span
                   class="pb_font-14 text-uppercase pb_letter-spacing-1">Посмотреть цены</span></a></p>
@@ -90,7 +90,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-1">
         </div>
         <div class="col-md-5 relative align-self-center " style="display: block">
-
+        <br> <br> <br> <br>
           <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
             <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
 
@@ -98,24 +98,29 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
               <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
             </div>
-			
-            <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" name="work_theme" placeholder="Тема работы" 
-               required=""   oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
-            </div>
-            <div class="form-group">
-                <div class="pb_select-wrap">
-                  <select class="form-control pb_height-50 reverse" name="typeSelect" required=""
-                  oninvalid="this.setCustomValidity('Пожалуйста выберите тип работы')" oninput="setCustomValidity('')">
-                    <option value="" selected>Тип работы</option>
-                    <option value="bachelor">Бакалавр</option>
-                    <option value="master">Магистратура</option>
-                  </select>
-                </div>
-              </div>
 
-           
-			
+			<div class="form-group">
+              <input type="text" class="form-control pb_height-50 reverse" placeholder="Тема работы" name="work_theme"
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
+            </div>
+<!--             <div class="form-group"> -->
+<!--                 <div class="pb_select-wrap"> -->
+<!--                   <select class="form-control pb_height-50 reverse" name="typeSelect" > -->
+<!--                     <option value="" selected>Тип работы</option> -->
+<!--                     <option value="bachelor">Бакалавр</option> -->
+<!--                     <option value="master">Магистратура</option> -->
+<!--                   </select> -->
+<!--                 </div> -->
+<!--               </div> -->
+
+
+
+            <div class="form-group">
+                <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
+                value="Краткое описание" ></textarea>
+              <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
+            </div>
+
 
 
      
@@ -154,9 +159,8 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
           <div class="media d-block pb_feature-v1 text-left">
             <div class="pb_icon"><i class="ion-ios-bookmarks-outline pb_icon-gradient"></i></div>
             <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Выполнение без задержек</h5>
-              <p class="text-sans-serif">Наши авторы оценят вашу работу и предложат адекватные сроки выполнения. Мы
-                проследим чтобы ваша работа была выполненна в установленный срок.</p>
+              <h5 class="mt-0 mb-3 heading">Современный дизайн</h5>
+              <p class="text-sans-serif">Приложения разрабатываются с применение современных средств разработки</p>
             </div>
           </div>
         </div>
@@ -164,53 +168,25 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
           <div class="media d-block pb_feature-v1 text-left">
             <div class="pb_icon"><i class="ion-ios-speedometer-outline pb_icon-gradient"></i></div>
             <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Fast Loading</h5>
-              <p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and
-                Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md- col-sm-6">
-          <div class="media d-block pb_feature-v1 text-left">
-            <div class="pb_icon"><i class="ion-ios-infinite-outline pb_icon-gradient"></i></div>
-            <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Unlimited Possibilities</h5>
-              <p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and
-                Consonantia, there live the blind texts.</p>
+              <h5 class="mt-0 mb-3 heading">Выполнение без задержек</h5>
+              <p class="text-sans-serif">Работы выполняются в приватных репозиториях на гитхабе, поэтому вы можете каждый день контролировать ход выполнения работы.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md- col-sm-6">
-          <div class="media d-block pb_feature-v1 text-left">
-            <div class="pb_icon"><i class="ion-ios-color-filter-outline pb_icon-gradient"></i></div>
-            <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Component Based Design</h5>
-              <p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and
-                Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md- col-sm-6">
-          <div class="media d-block pb_feature-v1 text-left">
-            <div class="pb_icon"><i class="ion-ios-wineglass-outline pb_icon-gradient"></i></div>
-            <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Clean Code</h5>
-              <p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and
-                Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
+
+        
         <div class="col-lg-4 col-md- col-sm-6">
           <div class="media d-block pb_feature-v1 text-left">
             <div class="pb_icon"><i class="ion-ios-paperplane-outline pb_icon-gradient"></i></div>
             <div class="media-body">
-              <h5 class="mt-0 mb-3 heading">Lightweight</h5>
-              <p class="text-sans-serif">Far far away, behind the word mountains, far from the countries Vokalia and
-                Consonantia, there live the blind texts.</p>
+              <h5 class="mt-0 mb-3 heading">Простой код</h5>
+              <p class="text-sans-serif">В нашем коде разберется даже новичок</p>
             </div>
           </div>
         </div>
+        
+        
       </div>
     </div>
   </section>
