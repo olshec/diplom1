@@ -113,8 +113,6 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 <!--                 </div> -->
 <!--               </div> -->
 
-
-
             <div class="form-group">
                 <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
                 value="Краткое описание" ></textarea>
@@ -336,7 +334,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-6 text-center mb-5">
           <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
             <strong>Отзывы</strong></h5>
-          <h2>Хорошие отзывы от хороших людей</h2>
+          <h2>Отзывы наших клиентов</h2>
         </div>
       </div>
       <div class="row">
@@ -348,7 +346,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
                   <div class="media-body">
                     <div class="quote">&ldquo;</div>
                     <blockquote class="mb-5">Заказывал работу на тему "Разработка информационной системы складского учета". 
-                    Стек: PHP, YII2, MariaDB. Сдал на отлично, спасибо!</blockquote>
+                    Стек: PHP, YII, MySQL. Сдал на отлично, спасибо!</blockquote>
                     <p>
                       <i class="ion-ios-star text-warning"></i>
                       <i class="ion-ios-star text-warning"></i>
@@ -458,13 +456,13 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-6 text-center mb-5">
           <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
             <strong>Цены</strong></h5>
-          <h2>Выберите свой тип работы</h2>
+          <h2>Выберите тип своей работы</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-md">
           <div class="pb_pricing_v1 p-5 border text-center bg-white">
-            <h3>Бакалаврская</h3>
+            <h3>Бакалаврская работа</h3>
             <span class="price"><sup>Р</sup>16 000</span>
             <p class="pb_font-15">Бакалаврские работы от 16 000. Точную цену уточняйте.</p>
             <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue">Заказать</a></p>
@@ -497,58 +495,55 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md">
           <div id="pb_faq" class="pb_accordion" data-children=".item">
             <div class="item">
-              <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq1" aria-expanded="true"
-                aria-controls="pb_faq1" class="pb_font-22 py-4">What is Instant?</a>
-              <div id="pb_faq1" class="collapse show" role="tabpanel">
+              <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq1" aria-expanded="false"
+                aria-controls="pb_faq1" class="pb_font-22 py-4">Сколько времени вам поднадобится на выполнение работы?</a>
+              <div id="pb_faq1" class="collapse " role="tabpanel">
                 <div class="py-3">
-                  <p>Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                    the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                    language ocean.</p>
+                  <p>Сроки написания каждой работы обговариваются индивидуально.</p>
+                  <p>Обычно на написание бакалаврской работы требуется от двух до трех недель, магистерской &mdash; от двух до четырех недель.</p>
                 </div>
               </div>
             </div>
             <div class="item">
               <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq2" aria-expanded="false"
-                aria-controls="pb_faq2" class="pb_font-22 py-4">Is this available to my country?</a>
+                aria-controls="pb_faq2" class="pb_font-22 py-4">Какие технологии вы используете?</a>
               <div id="pb_faq2" class="collapse" role="tabpanel">
                 <div class="py-3">
-                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
-                    a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                  <p>Мы делаем десктопные приложения на C# (Windows Forms, WPF, UWP) и веб-сайты на PHP. Базы данных: PostgreSQL, MySQL, MariaDB, Redis, MS SQL Server. Но можем обсудить и другие технологии.
+                  В случае разработки веб-сайта мы можем бесплатно разместить ваш сайт на своем хостинге, подключить домен и почтовый сервер.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="item">
               <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq3" aria-expanded="false"
-                aria-controls="pb_faq3" class="pb_font-22 py-4">How do I use the features of Instant App?</a>
+                aria-controls="pb_faq3" class="pb_font-22 py-4">Смогу ли я заказать доработку в случае необходимости?</a>
               <div id="pb_faq3" class="collapse" role="tabpanel">
                 <div class="py-3">
-                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
-                    life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
-                    far World of Grammar.</p>
+                  <p>Да. Все доработки в рамках задания и мелкие поправки проводятся бесплатно. При необходимости внесения существенных изменений не обговоренных заранее, цена за работу будет пересмотренна.</p>
                 </div>
               </div>
             </div>
             <div class="item">
               <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq4" aria-expanded="false"
-                aria-controls="pb_faq4" class="pb_font-22 py-4">How much do the Instant App cost?</a>
+                aria-controls="pb_faq4" class="pb_font-22 py-4">Я получу уникальную работу?</a>
               <div id="pb_faq4" class="collapse" role="tabpanel">
                 <div class="py-3">
-                  <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question
-                    Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia,
-                    put her initial into the belt and made herself on the way.</p>
+                  <p>Все наши работы являются оригинальными и пишутся только для одного клиента. Перепродажами работ мы не занимаемся.
+                  Уникальность работы составляет не менее 70%, проверяется по системам антиплагиата antiplagiat.ru и etxt.ru. При необходимости мы можем проверить и по другим системам.
+                  </p>
                 </div>
               </div>
             </div>
 
             <div class="item">
               <a data-toggle="collapse" data-parent="#pb_faq" href="#pb_faq5" aria-expanded="false"
-                aria-controls="pb_faq5" class="pb_font-22 py-4">I have technical problem, who do I email?</a>
+                aria-controls="pb_faq5" class="pb_font-22 py-4">Какие у меня гарантии?</a>
               <div id="pb_faq5" class="collapse" role="tabpanel">
                 <div class="py-3">
-                  <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
-                    have been rewritten a thousand times and everything that was left from its origin would be the word
-                    "and" and the Little Blind Text should turn around and return to its own, safe country. </p>
+                  <p>Оплата может производиться по частям. Работы выполняются в приватных репозиториях на гитхабе, 
+                  поэтому вы можете каждый день видеть прогесс написания вашей работы.
+                   </p>
                 </div>
               </div>
             </div>
@@ -564,41 +559,55 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-5 justify-content-center">
-          <h2 class="heading mb-5 pb_font-50">Join over 1M+ people who uses Instant App</h2>
+          <h2 class="heading mb-5 pb_font-40">Мы выполнили более 300 дипломных проектов</h2>
           <div class="sub-heading">
-            <p class="mb-4">New free template by <a href="http://uicookies.com" target="_blank">uicookies.com</a>. For
-              more templates visit the <a href="http://uicookies.com" target="_blank">site</a>. Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit.</p>
+            <p class="mb-4">Примеры выполнения типовых проектов вы можете посмотреть в нашем <a href="https://github.com/diplom-website?tab=repositories" target="_blank">репозитории</a> на гитхабе. 
+            Эти приложения являются демонстрационным примером выполнения типовых заданий, работы клиентов мы никогда не показываем.</p>
           </div>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
-          <form action="#" class="bg-white rounded pb_form_v1">
-            <h2 class="mb-4 mt-0 text-center">Sign Up for Free</h2>
+
+
+          <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
+            <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
+
             <div class="form-group">
-              <input type="text" class="form-control py-3 reverse" placeholder="Full name">
+              <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
+            </div>
+
+			<div class="form-group">
+              <input type="text" class="form-control pb_height-50 reverse" placeholder="Тема работы" name="work_theme"
+              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
+            </div>
+
+
+            <div class="form-group">
+                <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
+                value="Краткое описание" ></textarea>
+              <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
+            </div>
+
+
+
+     
+            <div class="form-group">
+              <input type="text" class="form-control pb_height-50 reverse" name="captcha_code" placeholder="Введите код на рисунке" 
+               required=""   oninvalid="this.setCustomValidity('Пожалуйста введите код')" oninput="setCustomValidity('')">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control py-3 reverse" placeholder="Email">
+              <img src="<?php echo $captcha->inline(); ?>" />
             </div>
-            <div class="form-group">
-              <input type="text" class="form-control py-3 reverse" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <div class="pb_select-wrap">
-                <select class="form-control pb_height-50 reverse">
-                  <option value="" selected>Type</option>
-                  <option value="">Basic</option>
-                  <option value="">Business</option>
-                  <option value="">Free</option>
-                </select>
-              </div>
-            </div>
+
+
             <div class="form-group">
               <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
-                value="Register">
+                value="Отправить">
             </div>
           </form>
+
+
         </div>
       </div>
     </div>
