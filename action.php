@@ -14,7 +14,7 @@ require './vendor/autoload.php';
 // echo "POST[captcha_code] = ".$_POST["captcha_code"].'<br>';
 
 
-if($_SESSION["captcha_code"] == $_POST["captcha_code"]){
+if($_SESSION["captcha_code"] == strtolower($_POST["captcha_code"]) ){
     $_SESSION["captcha_code"]=null;
     
     //myData
