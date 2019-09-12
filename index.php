@@ -70,13 +70,14 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   </nav>
   <!-- END nav -->
   
+<!-- pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light -->
 
-
-  <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
+<!-- pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8 -->
+  <section class="pb_section overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
     id="section-home">
     <div class="container">
       <!-- <br> <br> <br>--> 
-      <div class="row align-items-center justify-content-center">
+      <div class="row align-items-center justify-content-center"  style="color: white;">
         <div class="col-md-6">
           <h2 class="heading mb-3">Дипломные работы на заказ</h2>
           <div class="sub-heading">
@@ -97,10 +98,15 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
               <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
             </div>
-
+			
+            <div class="form-group">
+              <input type="text" class="form-control pb_height-50 reverse" name="work_theme" placeholder="Тема работы" 
+               required=""   oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
+            </div>
             <div class="form-group">
                 <div class="pb_select-wrap">
-                  <select class="form-control pb_height-50 reverse" name="typeSelect" >
+                  <select class="form-control pb_height-50 reverse" name="typeSelect" required=""
+                  oninvalid="this.setCustomValidity('Пожалуйста выберите тип работы')" oninput="setCustomValidity('')">
                     <option value="" selected>Тип работы</option>
                     <option value="bachelor">Бакалавр</option>
                     <option value="master">Магистратура</option>
@@ -108,12 +114,8 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
                 </div>
               </div>
 
-            <div class="form-group">
-                <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
-                value="Краткое описание" ></textarea>
-              <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
-            </div>
-
+           
+			
 
 
      
