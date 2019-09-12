@@ -32,7 +32,7 @@ body {
     -webkit-transform: rotate(-4deg);
     -ms-transform: rotate(-4deg);
     transform: rotate(-4deg);
-    z-index: -1; }
+    z-index: 10; }
   .pb_slant-light.pb_slant-reverse:after,
   .pb_slant-white.pb_slant-reverse:after {
     -webkit-transform: rotate(4deg);

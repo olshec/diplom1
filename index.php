@@ -683,69 +683,60 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
   <script>
 
-	heightFull = 1000;
-	heightMobile1 = 1300;
-	heightMobile2 = 1500;
+// 	heightFull = 1000;
+// 	heightMobile1 = 1300;
+// 	heightMobile2 = 1500;
 	
-    function setHeight() {
-      if ($(window).width() <= 800) {
-    	  if ($(window).width() <= 376) {
-    	         $("#section-home").css({ "height": heightMobile2 });
-    	        }
-    	  else
-        	$("#section-home").css({ "height": heightMobile1 });
-      }
-      else {
-        $("#section-home").css({ "height": heightFull });
-      }
-    }
+//     function setHeight() {
+//       if ($(window).width() <= 800) {
+//     	  if ($(window).width() <= 376) {
+//     	         $("#section-home").css({ "height": heightMobile2 });
+//     	        }
+//     	  else
+//         	$("#section-home").css({ "height": heightMobile1 });
+//       }
+//       else {
+//         $("#section-home").css({ "height": heightFull });
+//       }
+//     }
     
 
-    $(document).ready(function () {
-      //console.log( "ready!" );
-      setHeight();
+//     $(document).ready(function () {
+//       //console.log( "ready!" );
+//       setHeight();
 
-      $('#inputGroupFile01').inputFileText({
-        text: 'Select File'
-      });
+//       $('#inputGroupFile01').inputFileText({
+//         text: 'Select File'
+//       });
 
-      $(".pb_slant-light:after").css(
-          "z-index", "-10"
-        );
-        $(".pb_slant-white:after").css(
-          "z-index", "-10"
-        );
+//       $(".pb_slant-light:after").css(
+//           "z-index", "-10"
+//         );
+//         $(".pb_slant-white:after").css(
+//           "z-index", "-10"
+//         );
 
-    });
+//     });
 
-    $(window).resize(function () {
-      setHeight();
-    });
+//     $(window).resize(function () {
+//       setHeight();
+//     });
 
 
-    $(function () {
-      //Maps your button click event to the File Upload click event
-      $("#nameFile").click(function () {
+//     $(function () {
+//       //Maps your button click event to the File Upload click event
+//       $("#nameFile").click(function () {
 
-        $("#file1").trigger('click');
-        // alert($(this).val());
-        // alert($("#file1").val());
-        //  $("#name1").val($this.val());//text("Your Text to Choose a File Here!");
-      });
+//         $("#file1").trigger('click');
+//       });
 
-      // When your fake button is clicked, simulate a click of the file button
-      // $('#file1').click(function(){
-      //   alert('df');
-      //  // $("#name1").val($(this).val());
-      //   $("#name1").val('sd');
-      // });
-    })
 
-    document.getElementById('file1').onchange =
-      function () {
-        // alert('Selected file: ' + this.value);
-        $('#nameFile').val(this.value);
-      }
+//     })
+
+//     document.getElementById('file1').onchange =
+//       function () {
+//         $('#nameFile').val(this.value);
+//       }
 
   </script>
 
