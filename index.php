@@ -89,13 +89,10 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-1">
         </div>
         <div class="col-md-5 relative align-self-center " style="display: block">
-        <br> <br> <br> <br>
+
           <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
             <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
-            <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" id="name1" placeholder="Имя" name="name"
-              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите имя')" oninput="setCustomValidity('')">
-            </div>
+
             <div class="form-group">
               <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
@@ -110,11 +107,6 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
                   </select>
                 </div>
               </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control pb_height-50 reverse" id="nameFile" placeholder="Выберите файл" >
-                <input type="file" id="file1" name="file1" style="display:none" />
-            </div>
 
             <div class="form-group">
                 <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
