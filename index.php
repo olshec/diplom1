@@ -67,13 +67,11 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 			<div class="collapse navbar-collapse" id="probootstrap-navbar">
 				<ul class="navbar-nav ml-auto">
 
-					<li class="nav-item"><a class="nav-link" href="#section-features">Наши
-							преимущества</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-features">Наши преимущества</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Портфолио</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-pricing">Цены</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-reviews">Отзывы</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-faq">Вопросы
-							и ответы</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-faq">Вопросы и ответы</a></li>
 					<li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a
 						class="nav-link" href="#section-home"><span
 							class="pb_rounded-4 px-4">Заказать</span></a></li>
@@ -115,7 +113,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 					<br> <br> <br> <br>
 					<form action="action.php" class="bg-white rounded pb_form_v1"
 						method="post" enctype="multipart/form-data">
-						<h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
+						<h3 class="mb-4 mt-0 text-center">Заказать работу</h3>
 
 						<div class="form-group">
 							<input type="email" class="form-control pb_height-50 reverse"
@@ -560,7 +558,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
 	<section
 		class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8"
-		style="background-image: url(assets/images/1900x1200_img_5.jpg)">
+		style="background-image: url(assets/images/1900x1200_img_5.jpg)" >
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-5 justify-content-center">
@@ -578,10 +576,10 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 				<div class="col-md-1"></div>
 				<div class="col-md-5">
 
-
+				
 					<form action="action.php" class="bg-white rounded pb_form_v1"
 						method="post" enctype="multipart/form-data">
-						<h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
+						<h3 class="mb-4 mt-0 text-center">Заказать работу</h3>
 
 						<div class="form-group">
 							<input type="email" class="form-control pb_height-50 reverse"
@@ -589,7 +587,6 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 								oninvalid="this.setCustomValidity('Пожалуйста введите email')"
 								oninput="setCustomValidity('')">
 						</div>
-
 						<div class="form-group">
 							<input type="text" class="form-control pb_height-50 reverse"
 								placeholder="Тема работы" name="work_theme" required=""
@@ -684,6 +681,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
 	<script>
 
+	
 // 	heightFull = 1000;
 // 	heightMobile1 = 1300;
 // 	heightMobile2 = 1500;
