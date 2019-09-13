@@ -300,127 +300,114 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <!-- ENDs ection -->
    
   
-  <section class="pb_section pb_slant-light " id="section-reviews">
-    <div class="container">
-      <div class="row justify-content-center mb-1">
-        <div class="col-md-6 text-center mb-5">
-          <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
-            <strong>Отзывы</strong></h5>
-          <h2>Отзывы наших клиентов</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
-          <div class="pb_slide_testimonial_sync_v1">
-            <div class="pb_slider_content js-pb_slider_content2">
-              <div>
-                <div class="media d-block text-center testimonial_v1 pb_quote_v2">
-                  <div class="media-body">
-                    <div class="quote">&ldquo;</div>
-                    <blockquote class="mb-5">Заказывал разработать информационную систему учета клиентов для автосервиса. 
-                    Стек: PHP, YII, MySQL. Сдал на отлично, спасибо!</blockquote>
-                    <p>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star-half text-warning"></i>
-                    </p>
-                    <h3 class="heading">Борис Николаевич</h3>
-                    <span class="subheading">brsnikol@gmail.com</span>
+  	<section class="pb_section pb_slant-light " id="section-reviews">
+		<div class="container">
+			<div class="row justify-content-center mb-1">
+				<div class="col-md-6 text-center mb-5">
+					<h5
+						class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2">
+						<strong>Отзывы</strong>
+					</h5>
+					<h2>Отзывы наших клиентов</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<div class="pb_slide_testimonial_sync_v1">
+						<div class="pb_slider_content js-pb_slider_content2">
+							<div>
+								<div
+									class="media d-block text-center testimonial_v1 pb_quote_v2">
+									<div class="media-body">
+										<div class="quote">&ldquo;</div>
+										<blockquote class="mb-5">Заказывал разработать информационную
+											систему учета клиентов для автосервиса. Стек: PHP, Laravel,
+											MySQL. Сдал на отлично, спасибо!</blockquote>
+										<p>
+											<i class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i>
+										</p>
+										<h3 class="heading">Борис Николаевич</h3>
+										<span class="subheading">brsnikol@gmail.com</span>
 
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="media d-block text-center testimonial_v1 pb_quote_v2">
-                  <div class="media-body">
-                    <div class="quote">&ldquo;</div>
-                    <blockquote class="mb-5">A small river named Duden flows by their place and supplies it with the
-                      necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                      your mouth.</blockquote>
-                    <p>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star-half text-warning"></i>
-                      <i class="ion-ios-star-outline text-warning"></i>
-                    </p>
-                    <h3 class="heading">Deborah Smith</h3>
-                    <span class="subheading">@deborah</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="media d-block text-center testimonial_v1 pb_quote_v2">
-                  <div class="media-body">
-                    <div class="quote">&ldquo;</div>
-                    <blockquote class="mb-5">Even the all-powerful Pointing has no control about the blind texts it is
-                      an almost unorthographic life One day however a small line of blind text by the name of Lorem
-                      Ipsum decided to leave for the far World of Grammar.</blockquote>
-                    <p>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star-half text-warning"></i>
-                      <i class="ion-ios-star-outline text-warning"></i>
-                    </p>
-                    <h3 class="heading">James Robertson</h3>
-                    <span class="subheading">@james</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="media d-block text-center testimonial_v1 pb_quote_v2">
-                  <div class="media-body">
-                    <div class="quote">&ldquo;</div>
-                    <blockquote class="mb-5">The Big Oxmox advised her not to do so, because there were thousands of bad
-                      Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She
-                      packed her seven versalia, put her initial into the belt and made herself on the way.</blockquote>
-                    <p>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star text-warning"></i>
-                      <i class="ion-ios-star-half text-warning"></i>
-                      <i class="ion-ios-star-outline text-warning"></i>
-                    </p>
-                    <h3 class="heading">Marie Gibson</h3>
-                    <span class="subheading">@marie</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div
+									class="media d-block text-center testimonial_v1 pb_quote_v2">
+									<div class="media-body">
+										<div class="quote">&ldquo;</div>
+										<blockquote class="mb-5">Спасибо за выполнение сложной работы в такой короткий срок!</blockquote>
+										<p>
+											<i class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star-half text-warning"></i>
+										</p>
+										<h3 class="heading">Антон Егорьевич</h3>
+										<span class="subheading">antonsahmatov1990@gmail.com</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div
+									class="media d-block text-center testimonial_v1 pb_quote_v2">
+									<div class="media-body">
+										<div class="quote">&ldquo;</div>
+										<blockquote class="mb-5">Разработанная система на 100% устроила моего научного руководителя, даже не потребовались ни какие доработки, все сдано с первого раза!</blockquote>
+										<p>
+											<i class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i>
+										</p>
+										<h3 class="heading">Виктор Александрович</h3>
+										<span class="subheading">vikberner@gmail.com</span>
+									</div>
+								</div>
+							</div>
+						</div>
 
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <div class="pb_slider_nav js-pb_slider_nav2">
-                  <div class="author">
-                    <img class="img-fluid rounded-circle" src="assets/images/person_1.jpg"
-                      alt="Generic placeholder image">
-                  </div>
-                  <div class="author">
-                    <img class="img-fluid rounded-circle" src="assets/images/person_5.jpg"
-                      alt="Generic placeholder image">
-                  </div>
-                  <div class="author">
-                    <img class="img-fluid rounded-circle" src="assets/images/person_2.jpg"
-                      alt="Generic placeholder image">
-                  </div>
-                  <div class="author">
-                    <img class="img-fluid rounded-circle" src="assets/images/person_6.jpg"
-                      alt="Generic placeholder image">
-                  </div>
-                </div>
-              </div>
-            </div>
+						<div class="row">
+							<div class="col-md-6 mx-auto">
+								<div class="pb_slider_nav js-pb_slider_nav2">
+									<div class="author">
+										<img class="img-fluid rounded-circle"
+											src="assets/images/person_1.jpg"
+											alt="Generic placeholder image">
+									</div>
+									<div class="author">
+										<img class="img-fluid rounded-circle"
+											src="assets/images/person_5.jpg"
+											alt="Generic placeholder image">
+									</div>
+									<div class="author">
+										<img class="img-fluid rounded-circle"
+											src="assets/images/person_2.jpg"
+											alt="Generic placeholder image">
+									</div>
+									<div class="author">
+										<img class="img-fluid rounded-circle"
+											src="assets/images/person_6.jpg"
+											alt="Generic placeholder image">
+									</div>
+								</div>
+							</div>
+						</div>
 
-          </div>
-          <!-- END sync_v1 -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END section -->
+					</div>
+					<!-- END sync_v1 -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END section -->
   
   
   <section class="pb_section bg-light pb_slant-light " id="section-faq">
@@ -495,87 +482,111 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
     </div>
   </section>
 
-  <section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8"
-    style="background-image: url(assets/images/1900x1200_img_5.jpg)">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-5 justify-content-center">
-          <h2 class="heading mb-5 pb_font-40">Мы выполнили более 300 дипломных проектов</h2>
-          <div class="sub-heading">
-            <p class="mb-4">Примеры выполнения типовых проектов вы можете посмотреть на <a href="https://github.com/diplom-website?tab=repositories" target="_blank">гитхабе</a>. 
-<!--             Эти приложения являются демонстрационным примером выполнения типовых заданий, работы клиентов мы никогда не показываем.</p> -->
-          </div>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
+  
+  
+  
+  
+  
+
+	<section
+		class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8"
+		style="background-image: url(assets/images/1900x1200_img_5.jpg)" >
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-5 justify-content-center">
+					<h2 class="heading mb-5 pb_font-40">Мы выполнили более 300
+						дипломных проектов</h2>
+					<div class="sub-heading">
+						<p class="mb-4">
+							Примеры выполнения типовых проектов вы можете посмотреть на <a
+								href="https://github.com/diplom-website?tab=repositories"
+								target="_blank">гитхабе</a>.
+							<!--             Эти приложения являются демонстрационным примером выполнения типовых заданий, работы клиентов мы никогда не показываем.</p> -->
+					
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-5">
+
+				
+					<form action="action.php" class="bg-white rounded pb_form_v1"
+						method="post" enctype="multipart/form-data">
+						<h3 class="mb-4 mt-0 text-center">Заказать работу</h3>
+
+						<div class="form-group">
+							<input type="email" class="form-control pb_height-50 reverse"
+								placeholder="Email" name="email" required=""
+								oninvalid="this.setCustomValidity('Пожалуйста введите email')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control pb_height-50 reverse"
+								placeholder="Тема работы" name="work_theme" required=""
+								oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')"
+								oninput="setCustomValidity('')">
+						</div>
 
 
-          <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
-            <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
-
-            <div class="form-group">
-              <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
-              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите email')" oninput="setCustomValidity('')">
-            </div>
-
-			<div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" placeholder="Тема работы" name="work_theme"
-              required=""  oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
-            </div>
-
-
-            <div class="form-group">
-                <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
-                value="Краткое описание" ></textarea>
-              <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
-            </div>
+						<div class="form-group">
+							<textarea class="form-control pb_height-120 reverse"
+								placeholder="Краткое описание" name="message"
+								value="Краткое описание"></textarea>
+							<!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
+						</div>
 
 
 
-     
-            <div class="form-group">
-              <input type="text" class="form-control pb_height-50 reverse" name="captcha_code" placeholder="Введите код на рисунке" 
-               required=""   oninvalid="this.setCustomValidity('Пожалуйста введите код')" oninput="setCustomValidity('')">
-            </div>
-            <div class="form-group">
-              <img src="<?php echo $captcha->inline(); ?>" />
-            </div>
+
+						<div class="form-group">
+							<input type="text" class="form-control pb_height-50 reverse"
+								name="captcha_code" placeholder="Введите код на рисунке"
+								required=""
+								oninvalid="this.setCustomValidity('Пожалуйста введите код')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<img src="<?php echo $captcha->inline(); ?>" />
+						</div>
 
 
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
-                value="Отправить">
-            </div>
-          </form>
+						<div class="form-group">
+							<input type="submit"
+								class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue"
+								value="Отправить">
+						</div>
+					</form>
 
 
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END section -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END section -->
 
-  <footer class="pb_footer bg-light" role="contentinfo">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col text-center">
-          <p class="pb_font-14">&copy; 2019. All Rights Reserved. <br> <a
-              href="https://uicookies.com/bootstrap-html-templates/">Bootstrap Templates</a> by uiCookies</p>
-          <p class="pb_font-14">Demo Images: <a href="https://unsplash.com/" target="_blank" rel="nofollow">Unsplash</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+	<footer class="pb_footer bg-light" role="contentinfo">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col">
+					<ul class="list-inline">
+						<li class="list-inline-item"><a href="#" class="p-2"><i
+								class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="#" class="p-2"><i
+								class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="#" class="p-2"><i
+								class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<p class="pb_font-14">
+						&copy; 2019. Все права защищены. <br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+  
 
   <!-- loader -->
   <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
