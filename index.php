@@ -96,7 +96,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-md-5 relative align-self-center " style="display: block">
         <br> <br> <br> <br>
           <form action="action.php" class="bg-white rounded pb_form_v1" method="post" enctype="multipart/form-data">
-            <h3 class="mb-4 mt-0 text-center">Оценить работу</h3>
+            <h3 class="mb-4 mt-0 text-center">Заказать работу</h3>
 
             <div class="form-group">
               <input type="email" class="form-control pb_height-50 reverse" placeholder="Email" name="email"
