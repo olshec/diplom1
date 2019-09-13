@@ -341,24 +341,6 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 									class="media d-block text-center testimonial_v1 pb_quote_v2">
 									<div class="media-body">
 										<div class="quote">&ldquo;</div>
-										<blockquote class="mb-5">Спасибо за выполнение сложной работы в такой короткий срок!</blockquote>
-										<p>
-											<i class="ion-ios-star text-warning"></i> <i
-												class="ion-ios-star text-warning"></i> <i
-												class="ion-ios-star text-warning"></i> <i
-												class="ion-ios-star text-warning"></i> <i
-												class="ion-ios-star-half text-warning"></i>
-										</p>
-										<h3 class="heading">Антон Егорьевич</h3>
-										<span class="subheading">antonsahmatov1990@gmail.com</span>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div
-									class="media d-block text-center testimonial_v1 pb_quote_v2">
-									<div class="media-body">
-										<div class="quote">&ldquo;</div>
 										<blockquote class="mb-5">Разработанная система на 100% устроила моего научного руководителя, даже не потребовались ни какие доработки, все сдано с первого раза!</blockquote>
 										<p>
 											<i class="ion-ios-star text-warning"></i> <i
@@ -372,6 +354,25 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 									</div>
 								</div>
 							</div>
+							<div>
+								<div
+									class="media d-block text-center testimonial_v1 pb_quote_v2">
+									<div class="media-body">
+										<div class="quote">&ldquo;</div>
+										<blockquote class="mb-5">Спасибо за выполнение сложной работы в такой короткий срок!</blockquote>
+										<p>
+											<i class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star text-warning"></i> <i
+												class="ion-ios-star-half text-warning"></i>
+										</p>
+										<h3 class="heading">Антон Егорьевич</h3>
+										<span class="subheading">antonsahmatov1990@gmail.com</span>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 
 						<div class="row">
@@ -392,11 +393,11 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 											src="assets/images/person_2.jpg"
 											alt="Generic placeholder image">
 									</div>
-									<div class="author">
-										<img class="img-fluid rounded-circle"
-											src="assets/images/person_6.jpg"
-											alt="Generic placeholder image">
-									</div>
+<!-- 									<div class="author"> -->
+<!-- 										<img class="img-fluid rounded-circle" -->
+<!-- 											src="assets/images/person_6.jpg" -->
+<!-- 											alt="Generic placeholder image"> -->
+<!-- 									</div> -->
 								</div>
 							</div>
 						</div>
