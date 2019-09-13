@@ -17,7 +17,6 @@
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE.
  */
-
 namespace PHPMailer\PHPMailer;
 
 use League\OAuth2\Client\Grant\RefreshToken;
@@ -28,12 +27,13 @@ use League\OAuth2\Client\Token\AccessToken;
  * OAuth - OAuth2 authentication wrapper class.
  * Uses the oauth2-client package from the League of Extraordinary Packages.
  *
- * @see     http://oauth2-client.thephpleague.com
+ * @see http://oauth2-client.thephpleague.com
  *
- * @author  Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
+ * @author Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
  */
 class OAuth
 {
+
     /**
      * An instance of the League OAuth Client Provider.
      *
@@ -80,8 +80,9 @@ class OAuth
     /**
      * OAuth constructor.
      *
-     * @param array $options Associative array containing
-     *                       `provider`, `userName`, `clientSecret`, `clientId` and `refreshToken` elements
+     * @param array $options
+     *            Associative array containing
+     *            `provider`, `userName`, `clientSecret`, `clientId` and `refreshToken` elements
      */
     public function __construct($options)
     {
@@ -109,10 +110,9 @@ class OAuth
      */
     protected function getToken()
     {
-        return $this->provider->getAccessToken(
-            $this->getGrant(),
-            ['refresh_token' => $this->oauthRefreshToken]
-        );
+        return $this->provider->getAccessToken($this->getGrant(), [
+            'refresh_token' => $this->oauthRefreshToken
+        ]);
     }
 
     /**
@@ -127,12 +127,6 @@ class OAuth
             $this->oauthToken = $this->getToken();
         }
 
-        return base64_encode(
-            'user=' .
-            $this->oauthUserEmail .
-            "\001auth=Bearer " .
-            $this->oauthToken .
-            "\001\001"
-        );
+        return base64_encode('user=' . $this->oauthUserEmail . "\001auth=Bearer " . $this->oauthToken . "\001\001");
     }
 }

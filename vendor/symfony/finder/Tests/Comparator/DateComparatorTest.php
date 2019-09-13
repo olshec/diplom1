@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Comparator;
 
 use PHPUnit\Framework\TestCase;
@@ -16,6 +15,7 @@ use Symfony\Component\Finder\Comparator\DateComparator;
 
 class DateComparatorTest extends TestCase
 {
+
     public function testConstructor()
     {
         try {
@@ -34,6 +34,7 @@ class DateComparatorTest extends TestCase
     }
 
     /**
+     *
      * @dataProvider getTestData
      */
     public function testTest($test, $match, $noMatch)
@@ -52,13 +53,69 @@ class DateComparatorTest extends TestCase
     public function getTestData()
     {
         return [
-            ['< 2005-10-10', [strtotime('2005-10-09')], [strtotime('2005-10-15')]],
-            ['until 2005-10-10', [strtotime('2005-10-09')], [strtotime('2005-10-15')]],
-            ['before 2005-10-10', [strtotime('2005-10-09')], [strtotime('2005-10-15')]],
-            ['> 2005-10-10', [strtotime('2005-10-15')], [strtotime('2005-10-09')]],
-            ['after 2005-10-10', [strtotime('2005-10-15')], [strtotime('2005-10-09')]],
-            ['since 2005-10-10', [strtotime('2005-10-15')], [strtotime('2005-10-09')]],
-            ['!= 2005-10-10', [strtotime('2005-10-11')], [strtotime('2005-10-10')]],
+            [
+                '< 2005-10-10',
+                [
+                    strtotime('2005-10-09')
+                ],
+                [
+                    strtotime('2005-10-15')
+                ]
+            ],
+            [
+                'until 2005-10-10',
+                [
+                    strtotime('2005-10-09')
+                ],
+                [
+                    strtotime('2005-10-15')
+                ]
+            ],
+            [
+                'before 2005-10-10',
+                [
+                    strtotime('2005-10-09')
+                ],
+                [
+                    strtotime('2005-10-15')
+                ]
+            ],
+            [
+                '> 2005-10-10',
+                [
+                    strtotime('2005-10-15')
+                ],
+                [
+                    strtotime('2005-10-09')
+                ]
+            ],
+            [
+                'after 2005-10-10',
+                [
+                    strtotime('2005-10-15')
+                ],
+                [
+                    strtotime('2005-10-09')
+                ]
+            ],
+            [
+                'since 2005-10-10',
+                [
+                    strtotime('2005-10-15')
+                ],
+                [
+                    strtotime('2005-10-09')
+                ]
+            ],
+            [
+                '!= 2005-10-10',
+                [
+                    strtotime('2005-10-11')
+                ],
+                [
+                    strtotime('2005-10-10')
+                ]
+            ]
         ];
     }
 }

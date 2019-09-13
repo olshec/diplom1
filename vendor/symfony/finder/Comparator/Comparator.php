@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Comparator;
 
 /**
@@ -18,7 +17,9 @@ namespace Symfony\Component\Finder\Comparator;
  */
 class Comparator
 {
+
     private $target;
+
     private $operator = '==';
 
     /**
@@ -34,7 +35,8 @@ class Comparator
     /**
      * Sets the target value.
      *
-     * @param string $target The target value
+     * @param string $target
+     *            The target value
      */
     public function setTarget($target)
     {
@@ -54,17 +56,25 @@ class Comparator
     /**
      * Sets the comparison operator.
      *
-     * @param string $operator A valid operator
-     *
+     * @param string $operator
+     *            A valid operator
+     *            
      * @throws \InvalidArgumentException
      */
     public function setOperator($operator)
     {
-        if (!$operator) {
+        if (! $operator) {
             $operator = '==';
         }
 
-        if (!\in_array($operator, ['>', '<', '>=', '<=', '==', '!='])) {
+        if (! \in_array($operator, [
+            '>',
+            '<',
+            '>=',
+            '<=',
+            '==',
+            '!='
+        ])) {
             throw new \InvalidArgumentException(sprintf('Invalid operator "%s".', $operator));
         }
 
@@ -74,8 +84,9 @@ class Comparator
     /**
      * Tests against the target.
      *
-     * @param mixed $test A test value
-     *
+     * @param mixed $test
+     *            A test value
+     *            
      * @return bool
      */
     public function test($test)

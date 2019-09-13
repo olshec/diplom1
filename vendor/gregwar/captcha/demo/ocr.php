@@ -1,6 +1,5 @@
 <?php
-
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Gregwar\Captcha\CaptchaBuilder;
 
@@ -14,25 +13,22 @@ $passed = 0;
 
 shell_exec('rm passed*.jpg');
 
-for ($i=0; $i<$tests; $i++) {
+for ($i = 0; $i < $tests; $i ++) {
     echo "Captcha $i/$tests... ";
 
-    $captcha = new CaptchaBuilder;
+    $captcha = new CaptchaBuilder();
 
-    $captcha
-        ->setDistortion(false)
-        ->build()
-    ;
+    $captcha->setDistortion(false)->build();
 
     if ($captcha->isOCRReadable()) {
-        $passed++;
+        $passed ++;
         $captcha->save("passed$passed.jpg");
         echo "passed at ocr... ";
     } else {
         echo "failed... ";
     }
 
-    echo "pass rate: ".round(100*$passed/($i+1),2)."%\n";
+    echo "pass rate: " . round(100 * $passed / ($i + 1), 2) . "%\n";
 }
 
 echo "\n";

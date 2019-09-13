@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests;
 
 use PHPUnit\Framework\TestCase;
@@ -17,6 +16,7 @@ use Symfony\Component\Finder\Glob;
 
 class GlobTest extends TestCase
 {
+
     public function testGlobToRegexDelimiters()
     {
         $this->assertEquals('#^(?=[^\.])\#$#', Glob::toRegex('#'));
@@ -39,7 +39,10 @@ class GlobTest extends TestCase
         }
         sort($match);
 
-        $this->assertSame(['one/b/c.neon', 'one/b/d.neon'], $match);
+        $this->assertSame([
+            'one/b/c.neon',
+            'one/b/d.neon'
+        ], $match);
     }
 
     public function testGlobToRegexDoubleStarNonStrictDots()
@@ -56,7 +59,12 @@ class GlobTest extends TestCase
         }
         sort($match);
 
-        $this->assertSame(['.dot/b/c.neon', '.dot/b/d.neon', 'one/b/c.neon', 'one/b/d.neon'], $match);
+        $this->assertSame([
+            '.dot/b/c.neon',
+            '.dot/b/d.neon',
+            'one/b/c.neon',
+            'one/b/d.neon'
+        ], $match);
     }
 
     public function testGlobToRegexDoubleStarWithoutLeadingSlash()
@@ -73,7 +81,12 @@ class GlobTest extends TestCase
         }
         sort($match);
 
-        $this->assertSame(['one/a', 'one/b', 'one/b/c.neon', 'one/b/d.neon'], $match);
+        $this->assertSame([
+            'one/a',
+            'one/b',
+            'one/b/c.neon',
+            'one/b/d.neon'
+        ], $match);
     }
 
     public function testGlobToRegexDoubleStarWithoutLeadingSlashNotStrictLeadingDot()
@@ -90,6 +103,12 @@ class GlobTest extends TestCase
         }
         sort($match);
 
-        $this->assertSame(['one/.dot', 'one/a', 'one/b', 'one/b/c.neon', 'one/b/d.neon'], $match);
+        $this->assertSame([
+            'one/.dot',
+            'one/a',
+            'one/b',
+            'one/b/c.neon',
+            'one/b/d.neon'
+        ], $match);
     }
 }

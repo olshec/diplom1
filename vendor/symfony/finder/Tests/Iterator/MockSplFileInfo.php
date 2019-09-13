@@ -8,19 +8,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 class MockSplFileInfo extends \SplFileInfo
 {
+
     const TYPE_DIRECTORY = 1;
+
     const TYPE_FILE = 2;
+
     const TYPE_UNKNOWN = 3;
 
     private $contents = null;
+
     private $mode = null;
+
     private $type = null;
+
     private $relativePath = null;
+
     private $relativePathname = null;
 
     public function __construct($param)
@@ -34,7 +40,7 @@ class MockSplFileInfo extends \SplFileInfo
                 'mode' => null,
                 'type' => null,
                 'relativePath' => null,
-                'relativePathname' => null,
+                'relativePathname' => null
             ];
             $defaults = array_merge($defaults, $param);
             parent::__construct($defaults['name']);

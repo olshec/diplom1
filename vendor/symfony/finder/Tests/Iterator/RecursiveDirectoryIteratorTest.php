@@ -8,14 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Iterator\RecursiveDirectoryIterator;
 
 class RecursiveDirectoryIteratorTest extends IteratorTestCase
 {
+
     /**
+     *
      * @group network
      */
     public function testRewindOnFtp()
@@ -32,6 +33,7 @@ class RecursiveDirectoryIteratorTest extends IteratorTestCase
     }
 
     /**
+     *
      * @group network
      */
     public function testSeekOnFtp()
@@ -43,8 +45,8 @@ class RecursiveDirectoryIteratorTest extends IteratorTestCase
         }
 
         $contains = [
-            'ftp://speedtest.tele2.net'.\DIRECTORY_SEPARATOR.'1000GB.zip',
-            'ftp://speedtest.tele2.net'.\DIRECTORY_SEPARATOR.'100GB.zip',
+            'ftp://speedtest.tele2.net' . \DIRECTORY_SEPARATOR . '1000GB.zip',
+            'ftp://speedtest.tele2.net' . \DIRECTORY_SEPARATOR . '100GB.zip'
         ];
         $actual = [];
 

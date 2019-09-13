@@ -1,5 +1,4 @@
 <?php
-
 namespace Gregwar\Captcha;
 
 use Symfony\Component\Finder\Finder;
@@ -12,42 +11,52 @@ use Symfony\Component\Finder\Finder;
  */
 class ImageFileHandler
 {
+
     /**
      * Name of folder for captcha images
+     *
      * @var string
      */
     protected $imageFolder;
 
     /**
      * Absolute path to public web folder
+     *
      * @var string
      */
     protected $webPath;
 
     /**
      * Frequency of garbage collection in fractions of 1
+     *
      * @var int
      */
     protected $gcFreq;
 
     /**
      * Maximum age of images in minutes
+     *
      * @var int
      */
     protected $expiration;
 
     /**
-     * @param $imageFolder
-     * @param $webPath
-     * @param $gcFreq
-     * @param $expiration
+     *
+     * @param
+     *            $imageFolder
+     * @param
+     *            $webPath
+     * @param
+     *            $gcFreq
+     * @param
+     *            $expiration
      */
     public function __construct($imageFolder, $webPath, $gcFreq, $expiration)
     {
-        $this->imageFolder      = $imageFolder;
-        $this->webPath          = $webPath;
-        $this->gcFreq           = $gcFreq;
-        $this->expiration       = $expiration;
+        $this->imageFolder = $imageFolder;
+        $this->webPath = $webPath;
+        $this->gcFreq = $gcFreq;
+        $this->expiration = $expiration;
     }
 
     /**
@@ -75,7 +84,7 @@ class ImageFileHandler
      */
     public function collectGarbage()
     {
-        if (!mt_rand(1, $this->gcFreq) == 1) {
+        if (! mt_rand(1, $this->gcFreq) == 1) {
             return false;
         }
 
@@ -83,8 +92,7 @@ class ImageFileHandler
 
         $finder = new Finder();
         $criteria = sprintf('<= now - %s minutes', $this->expiration);
-        $finder->in($this->webPath . '/' . $this->imageFolder)
-            ->date($criteria);
+        $finder->in($this->webPath . '/' . $this->imageFolder)->date($criteria);
 
         foreach ($finder->files() as $file) {
             unlink($file->getPathname());
@@ -98,7 +106,7 @@ class ImageFileHandler
      */
     protected function createFolderIfMissing()
     {
-        if (!file_exists($this->webPath . '/' . $this->imageFolder)) {
+        if (! file_exists($this->webPath . '/' . $this->imageFolder)) {
             mkdir($this->webPath . '/' . $this->imageFolder, 0755);
         }
     }

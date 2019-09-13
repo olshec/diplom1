@@ -8,17 +8,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Iterator;
 
 /**
- * PathFilterIterator filters files by path patterns (e.g. some/special/dir).
+ * PathFilterIterator filters files by path patterns (e.g.
+ * some/special/dir).
  *
- * @author Fabien Potencier  <fabien@symfony.com>
+ * @author Fabien Potencier <fabien@symfony.com>
  * @author Włodzimierz Gajda <gajdaw@gajdaw.pl>
  */
 class PathFilterIterator extends MultiplePcreFilterIterator
 {
+
     /**
      * Filters the iterator values.
      *
@@ -41,16 +42,17 @@ class PathFilterIterator extends MultiplePcreFilterIterator
      * PCRE patterns are left unchanged.
      *
      * Default conversion:
-     *     'lorem/ipsum/dolor' ==>  'lorem\/ipsum\/dolor/'
+     * 'lorem/ipsum/dolor' ==> 'lorem\/ipsum\/dolor/'
      *
      * Use only / as directory separator (on Windows also).
      *
-     * @param string $str Pattern: regexp or dirname
-     *
+     * @param string $str
+     *            Pattern: regexp or dirname
+     *            
      * @return string regexp corresponding to a given string or regexp
      */
     protected function toRegex($str)
     {
-        return $this->isRegex($str) ? $str : '/'.preg_quote($str, '/').'/';
+        return $this->isRegex($str) ? $str : '/' . preg_quote($str, '/') . '/';
     }
 }

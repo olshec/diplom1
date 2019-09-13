@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Comparator\DateComparator;
@@ -16,7 +15,9 @@ use Symfony\Component\Finder\Iterator\DateRangeFilterIterator;
 
 class DateRangeFilterIteratorTest extends RealIteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($size, $expected)
@@ -53,7 +54,7 @@ class DateRangeFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $since2MonthsAgo = [
@@ -75,18 +76,33 @@ class DateRangeFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $untilLastMonth = [
             'foo/bar.tmp',
-            'test.php',
+            'test.php'
         ];
 
         return [
-            [[new DateComparator('since 20 years ago')], $this->toAbsolute($since20YearsAgo)],
-            [[new DateComparator('since 2 months ago')], $this->toAbsolute($since2MonthsAgo)],
-            [[new DateComparator('until last month')], $this->toAbsolute($untilLastMonth)],
+            [
+                [
+                    new DateComparator('since 20 years ago')
+                ],
+                $this->toAbsolute($since20YearsAgo)
+            ],
+            [
+                [
+                    new DateComparator('since 2 months ago')
+                ],
+                $this->toAbsolute($since2MonthsAgo)
+            ],
+            [
+                [
+                    new DateComparator('until last month')
+                ],
+                $this->toAbsolute($untilLastMonth)
+            ]
         ];
     }
 }

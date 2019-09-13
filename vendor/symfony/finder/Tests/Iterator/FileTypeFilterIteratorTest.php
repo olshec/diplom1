@@ -8,14 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Iterator\FileTypeFilterIterator;
 
 class FileTypeFilterIteratorTest extends RealIteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($mode, $expected)
@@ -44,7 +45,7 @@ class FileTypeFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $onlyDirectories = [
@@ -53,18 +54,25 @@ class FileTypeFilterIteratorTest extends RealIteratorTestCase
             'qux',
             'toto',
             'toto/.git',
-            '.foo',
+            '.foo'
         ];
 
         return [
-            [FileTypeFilterIterator::ONLY_FILES, $this->toAbsolute($onlyFiles)],
-            [FileTypeFilterIterator::ONLY_DIRECTORIES, $this->toAbsolute($onlyDirectories)],
+            [
+                FileTypeFilterIterator::ONLY_FILES,
+                $this->toAbsolute($onlyFiles)
+            ],
+            [
+                FileTypeFilterIterator::ONLY_DIRECTORIES,
+                $this->toAbsolute($onlyDirectories)
+            ]
         ];
     }
 }
 
 class InnerTypeIterator extends \ArrayIterator
 {
+
     public function current()
     {
         return new \SplFileInfo(parent::current());

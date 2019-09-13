@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Comparator\NumberComparator;
@@ -16,7 +15,9 @@ use Symfony\Component\Finder\Iterator\SizeRangeFilterIterator;
 
 class SizeRangeFilterIteratorTest extends RealIteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($size, $expected)
@@ -37,17 +38,24 @@ class SizeRangeFilterIteratorTest extends RealIteratorTestCase
             'qux',
             'test.php',
             'toto',
-            'toto/.git',
+            'toto/.git'
         ];
 
         return [
-            [[new NumberComparator('< 1K'), new NumberComparator('> 0.5K')], $this->toAbsolute($lessThan1KGreaterThan05K)],
+            [
+                [
+                    new NumberComparator('< 1K'),
+                    new NumberComparator('> 0.5K')
+                ],
+                $this->toAbsolute($lessThan1KGreaterThan05K)
+            ]
         ];
     }
 }
 
 class InnerSizeIterator extends \ArrayIterator
 {
+
     public function current()
     {
         return new \SplFileInfo(parent::current());

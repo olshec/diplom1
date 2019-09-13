@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Comparator;
 
 /**
@@ -18,14 +17,17 @@ namespace Symfony\Component\Finder\Comparator;
  */
 class DateComparator extends Comparator
 {
+
     /**
-     * @param string $test A comparison string
      *
+     * @param string $test
+     *            A comparison string
+     *            
      * @throws \InvalidArgumentException If the test is not understood
      */
     public function __construct(string $test)
     {
-        if (!preg_match('#^\s*(==|!=|[<>]=?|after|since|before|until)?\s*(.+?)\s*$#i', $test, $matches)) {
+        if (! preg_match('#^\s*(==|!=|[<>]=?|after|since|before|until)?\s*(.+?)\s*$#i', $test, $matches)) {
             throw new \InvalidArgumentException(sprintf('Don\'t understand "%s" as a date test.', $test));
         }
 

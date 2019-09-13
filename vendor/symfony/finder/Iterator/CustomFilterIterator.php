@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Iterator;
 
 /**
@@ -21,18 +20,22 @@ namespace Symfony\Component\Finder\Iterator;
  */
 class CustomFilterIterator extends \FilterIterator
 {
+
     private $filters = [];
 
     /**
-     * @param \Iterator  $iterator The Iterator to filter
-     * @param callable[] $filters  An array of PHP callbacks
      *
+     * @param \Iterator $iterator
+     *            The Iterator to filter
+     * @param callable[] $filters
+     *            An array of PHP callbacks
+     *            
      * @throws \InvalidArgumentException
      */
     public function __construct(\Iterator $iterator, array $filters)
     {
         foreach ($filters as $filter) {
-            if (!\is_callable($filter)) {
+            if (! \is_callable($filter)) {
                 throw new \InvalidArgumentException('Invalid PHP callback.');
             }
         }

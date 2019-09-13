@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Iterator;
 
 /**
@@ -18,14 +17,21 @@ namespace Symfony\Component\Finder\Iterator;
  */
 class ExcludeDirectoryFilterIterator extends \FilterIterator implements \RecursiveIterator
 {
+
     private $iterator;
+
     private $isRecursive;
+
     private $excludedDirs = [];
+
     private $excludedPattern;
 
     /**
-     * @param \Iterator $iterator    The Iterator to filter
-     * @param string[]  $directories An array of directories to exclude
+     *
+     * @param \Iterator $iterator
+     *            The Iterator to filter
+     * @param string[] $directories
+     *            An array of directories to exclude
      */
     public function __construct(\Iterator $iterator, array $directories)
     {
@@ -34,14 +40,14 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
         $patterns = [];
         foreach ($directories as $directory) {
             $directory = rtrim($directory, '/');
-            if (!$this->isRecursive || false !== strpos($directory, '/')) {
+            if (! $this->isRecursive || false !== strpos($directory, '/')) {
                 $patterns[] = preg_quote($directory, '#');
             } else {
                 $this->excludedDirs[$directory] = true;
             }
         }
         if ($patterns) {
-            $this->excludedPattern = '#(?:^|/)(?:'.implode('|', $patterns).')(?:/|$)#';
+            $this->excludedPattern = '#(?:^|/)(?:' . implode('|', $patterns) . ')(?:/|$)#';
         }
 
         parent::__construct($iterator);
@@ -62,7 +68,7 @@ class ExcludeDirectoryFilterIterator extends \FilterIterator implements \Recursi
             $path = $this->isDir() ? $this->current()->getRelativePathname() : $this->current()->getRelativePath();
             $path = str_replace('\\', '/', $path);
 
-            return !preg_match($this->excludedPattern, $path);
+            return ! preg_match($this->excludedPattern, $path);
         }
 
         return true;

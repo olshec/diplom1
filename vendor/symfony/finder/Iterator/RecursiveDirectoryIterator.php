@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Iterator;
 
 use Symfony\Component\Finder\Exception\AccessDeniedException;
@@ -21,22 +20,28 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
 {
+
     /**
+     *
      * @var bool
      */
     private $ignoreUnreadableDirs;
 
     /**
+     *
      * @var bool
      */
     private $rewindable;
 
     // these 3 properties take part of the performance optimization to avoid redoing the same work in all iterations
     private $rootPath;
+
     private $subPath;
+
     private $directorySeparator = '/';
 
     /**
+     *
      * @throws \RuntimeException
      */
     public function __construct(string $path, int $flags, bool $ignoreUnreadableDirs = false)
@@ -48,7 +53,7 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         parent::__construct($path, $flags);
         $this->ignoreUnreadableDirs = $ignoreUnreadableDirs;
         $this->rootPath = $path;
-        if ('/' !== \DIRECTORY_SEPARATOR && !($flags & self::UNIX_PATHS)) {
+        if ('/' !== \DIRECTORY_SEPARATOR && ! ($flags & self::UNIX_PATHS)) {
             $this->directorySeparator = \DIRECTORY_SEPARATOR;
         }
     }
@@ -61,7 +66,6 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
     public function current()
     {
         // the logic here avoids redoing the same work in all iterations
-
         if (null === $subPathname = $this->subPath) {
             $subPathname = $this->subPath = (string) $this->getSubPath();
         }
@@ -70,10 +74,11 @@ class RecursiveDirectoryIterator extends \RecursiveDirectoryIterator
         }
         $subPathname .= $this->getFilename();
 
-        return new SplFileInfo($this->rootPath.$this->directorySeparator.$subPathname, $this->subPath, $subPathname);
+        return new SplFileInfo($this->rootPath . $this->directorySeparator . $subPathname, $this->subPath, $subPathname);
     }
 
     /**
+     *
      * @return \RecursiveIterator
      *
      * @throws AccessDeniedException

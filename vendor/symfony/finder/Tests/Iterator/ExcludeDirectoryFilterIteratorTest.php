@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator;
@@ -16,7 +15,9 @@ use Symfony\Component\Finder\Iterator\RecursiveDirectoryIterator;
 
 class ExcludeDirectoryFilterIteratorTest extends RealIteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($directories, $expected)
@@ -50,7 +51,7 @@ class ExcludeDirectoryFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $fo = [
@@ -75,7 +76,7 @@ class ExcludeDirectoryFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $toto = [
@@ -98,13 +99,28 @@ class ExcludeDirectoryFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         return [
-            [['foo'], $this->toAbsolute($foo)],
-            [['fo'], $this->toAbsolute($fo)],
-            [['toto/'], $this->toAbsolute($toto)],
+            [
+                [
+                    'foo'
+                ],
+                $this->toAbsolute($foo)
+            ],
+            [
+                [
+                    'fo'
+                ],
+                $this->toAbsolute($fo)
+            ],
+            [
+                [
+                    'toto/'
+                ],
+                $this->toAbsolute($toto)
+            ]
         ];
     }
 }

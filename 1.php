@@ -1,11 +1,10 @@
-<?php 
+<?php
+$x = 8;
+$y = 10;
 
-$x=8;
-$y=10;
+$z = $x + $y;
 
-$z=$x+$y;
-
-echo $z."<br>";
+echo $z . "<br>";
 echo 12332;
 echo $z;
 ?>

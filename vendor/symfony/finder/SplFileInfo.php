@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder;
 
 /**
@@ -18,13 +17,19 @@ namespace Symfony\Component\Finder;
  */
 class SplFileInfo extends \SplFileInfo
 {
+
     private $relativePath;
+
     private $relativePathname;
 
     /**
-     * @param string $file             The file name
-     * @param string $relativePath     The relative path
-     * @param string $relativePathname The relative path name
+     *
+     * @param string $file
+     *            The file name
+     * @param string $relativePath
+     *            The relative path
+     * @param string $relativePathname
+     *            The relative path name
      */
     public function __construct(string $file, string $relativePath, string $relativePathname)
     {
@@ -68,12 +73,14 @@ class SplFileInfo extends \SplFileInfo
      * Returns the contents of the file.
      *
      * @return string the contents of the file
-     *
+     *        
      * @throws \RuntimeException
      */
     public function getContents()
     {
-        set_error_handler(function ($type, $msg) use (&$error) { $error = $msg; });
+        set_error_handler(function ($type, $msg) use (&$error) {
+            $error = $msg;
+        });
         $content = file_get_contents($this->getPathname());
         restore_error_handler();
         if (false === $content) {

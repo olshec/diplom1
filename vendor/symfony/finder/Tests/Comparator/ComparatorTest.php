@@ -8,7 +8,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Comparator;
 
 use PHPUnit\Framework\TestCase;
@@ -16,6 +15,7 @@ use Symfony\Component\Finder\Comparator\Comparator;
 
 class ComparatorTest extends TestCase
 {
+
     public function testGetSetOperator()
     {
         $comparator = new Comparator();
@@ -39,6 +39,7 @@ class ComparatorTest extends TestCase
     }
 
     /**
+     *
      * @dataProvider getTestData
      */
     public function testTest($operator, $target, $match, $noMatch)
@@ -59,7 +60,18 @@ class ComparatorTest extends TestCase
     public function getTestData()
     {
         return [
-            ['<', '1000', ['500', '999'], ['1000', '1500']],
+            [
+                '<',
+                '1000',
+                [
+                    '500',
+                    '999'
+                ],
+                [
+                    '1000',
+                    '1500'
+                ]
+            ]
         ];
     }
 }

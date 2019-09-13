@@ -8,14 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Iterator\DepthRangeFilterIterator;
 
 class DepthRangeFilterIteratorTest extends RealIteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($minDepth, $maxDepth, $expected)
@@ -48,7 +49,7 @@ class DepthRangeFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $lessThanOrEqualTo1 = [
@@ -73,7 +74,7 @@ class DepthRangeFilterIteratorTest extends RealIteratorTestCase
             'qux_1002_0.php',
             'qux_10_2.php',
             'qux_12_0.php',
-            'qux_2_0.php',
+            'qux_2_0.php'
         ];
 
         $graterThanOrEqualTo1 = [
@@ -82,7 +83,7 @@ class DepthRangeFilterIteratorTest extends RealIteratorTestCase
             '.foo/.bar',
             '.foo/bar',
             'qux/baz_100_1.py',
-            'qux/baz_1_2.py',
+            'qux/baz_1_2.py'
         ];
 
         $equalTo1 = [
@@ -91,15 +92,35 @@ class DepthRangeFilterIteratorTest extends RealIteratorTestCase
             '.foo/.bar',
             '.foo/bar',
             'qux/baz_100_1.py',
-            'qux/baz_1_2.py',
+            'qux/baz_1_2.py'
         ];
 
         return [
-            [0, 0, $this->toAbsolute($lessThan1)],
-            [0, 1, $this->toAbsolute($lessThanOrEqualTo1)],
-            [2, PHP_INT_MAX, []],
-            [1, PHP_INT_MAX, $this->toAbsolute($graterThanOrEqualTo1)],
-            [1, 1, $this->toAbsolute($equalTo1)],
+            [
+                0,
+                0,
+                $this->toAbsolute($lessThan1)
+            ],
+            [
+                0,
+                1,
+                $this->toAbsolute($lessThanOrEqualTo1)
+            ],
+            [
+                2,
+                PHP_INT_MAX,
+                []
+            ],
+            [
+                1,
+                PHP_INT_MAX,
+                $this->toAbsolute($graterThanOrEqualTo1)
+            ],
+            [
+                1,
+                1,
+                $this->toAbsolute($equalTo1)
+            ]
         ];
     }
 }

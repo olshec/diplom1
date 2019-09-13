@@ -1,5 +1,4 @@
 <?php
-
 namespace Gregwar\Captcha;
 
 /**
@@ -9,15 +8,19 @@ namespace Gregwar\Captcha;
  */
 class PhraseBuilder implements PhraseBuilderInterface
 {
+
     /**
+     *
      * @var int
      */
     public $length;
 
     /**
+     *
      * @var string
      */
     public $charset;
+
     /**
      * Constructs a PhraseBuilder with given parameters
      */
@@ -28,7 +31,7 @@ class PhraseBuilder implements PhraseBuilderInterface
     }
 
     /**
-     * Generates  random phrase of given length with given charset
+     * Generates random phrase of given length with given charset
      */
     public function build($length = null, $charset = null)
     {
@@ -42,7 +45,7 @@ class PhraseBuilder implements PhraseBuilderInterface
         $phrase = '';
         $chars = str_split($this->charset);
 
-        for ($i = 0; $i < $this->length; $i++) {
+        for ($i = 0; $i < $this->length; $i ++) {
             $phrase .= $chars[array_rand($chars)];
         }
 

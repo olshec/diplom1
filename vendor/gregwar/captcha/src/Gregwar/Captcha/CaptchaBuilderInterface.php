@@ -1,5 +1,4 @@
 <?php
-
 namespace Gregwar\Captcha;
 
 /**
@@ -7,6 +6,7 @@ namespace Gregwar\Captcha;
  */
 interface CaptchaBuilderInterface
 {
+
     /**
      * Builds the code
      */

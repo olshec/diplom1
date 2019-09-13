@@ -8,19 +8,24 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Symfony\Component\Finder\Tests\Iterator;
 
 use Symfony\Component\Finder\Iterator\FilenameFilterIterator;
 
 class FilenameFilterIteratorTest extends IteratorTestCase
 {
+
     /**
+     *
      * @dataProvider getAcceptData
      */
     public function testAccept($matchPatterns, $noMatchPatterns, $expected)
     {
-        $inner = new InnerNameIterator(['test.php', 'test.py', 'foo.php']);
+        $inner = new InnerNameIterator([
+            'test.php',
+            'test.py',
+            'foo.php'
+        ]);
 
         $iterator = new FilenameFilterIterator($inner, $matchPatterns, $noMatchPatterns);
 
@@ -30,18 +35,75 @@ class FilenameFilterIteratorTest extends IteratorTestCase
     public function getAcceptData()
     {
         return [
-            [['test.*'], [], ['test.php', 'test.py']],
-            [[], ['test.*'], ['foo.php']],
-            [['*.php'], ['test.*'], ['foo.php']],
-            [['*.php', '*.py'], ['foo.*'], ['test.php', 'test.py']],
-            [['/\.php$/'], [], ['test.php', 'foo.php']],
-            [[], ['/\.php$/'], ['test.py']],
+            [
+                [
+                    'test.*'
+                ],
+                [],
+                [
+                    'test.php',
+                    'test.py'
+                ]
+            ],
+            [
+                [],
+                [
+                    'test.*'
+                ],
+                [
+                    'foo.php'
+                ]
+            ],
+            [
+                [
+                    '*.php'
+                ],
+                [
+                    'test.*'
+                ],
+                [
+                    'foo.php'
+                ]
+            ],
+            [
+                [
+                    '*.php',
+                    '*.py'
+                ],
+                [
+                    'foo.*'
+                ],
+                [
+                    'test.php',
+                    'test.py'
+                ]
+            ],
+            [
+                [
+                    '/\.php$/'
+                ],
+                [],
+                [
+                    'test.php',
+                    'foo.php'
+                ]
+            ],
+            [
+                [],
+                [
+                    '/\.php$/'
+                ],
+                [
+                    'test.py'
+                ]
+            ]
         ];
     }
 }
 
 class InnerNameIterator extends \ArrayIterator
 {
+
     public function current()
     {
         return new \SplFileInfo(parent::current());
