@@ -20,7 +20,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Cache-Control" content="no-store" />
 
-  <title>Landing &mdash; Free One Page Bootstrap 4 Template by uicookies.com</title>
+  <title>Диплом &mdash; помощь с учебой</title>
   <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
   <meta name="keywords"
     content="Помощь диплом, Писать диплом, Диплом тема, Заказать диплом, Диплом заказ, Написать диплом, Заказать написание диплома, Купить диплом, Диплом по программированию">
@@ -77,7 +77,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <section class="pb_cover_v4 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light"
     id="section-home">
     <div class="container">
-      <!-- <br> <br> <br>--> 
+     
       <div class="row align-items-center justify-content-center">
         <div class="col-md-6">
           <h2 class="heading mb-3" style="font-size: 3em;">Заказать дипломную работу</h2>
@@ -131,6 +131,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
         </div>
       </div>
+
     </div>
   </section>
   <!-- END section -->

@@ -34,28 +34,7 @@
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-  <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
-    <div class="container">
-<!--       <a class="navbar-brand" href="index.php">Диплом</a> -->
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar"
-        aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="ion-navicon"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="probootstrap-navbar">
-        <ul class="navbar-nav ml-auto">
-          
-          <li class="nav-item"><a class="nav-link" href="#section-features">Наши преимущества</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-portfolio">Портфолио</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-pricing">Цены</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-reviews">Отзывы</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-faq">Вопросы и ответы</a></li>
-          <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link"
-              href="#section-home"><span class="pb_rounded-4 px-4">Заказать</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- END nav -->
+
   
   
  
@@ -64,30 +43,19 @@
     id="section-home">
     <div class="container">
 
-  {if $send_message eq 'true'}
-	      <div class="row align-items-center justify-content-center">
-        <div style="text-align: center">
-          <h2 class="heading" style="font-size: 3em;">zzz</h2>
-          <br>
-          <div class="sub-heading">
-           <p class="mb-4" >zxczxc
-            </p>
-          </div>
-        </div>
-      </div>
-  {else}
-     <div class="row align-items-center justify-content-center">
-        <div style="text-align: center">
-          <h2 class="heading" style="font-size: 3em;">Ваша заявка на рассмотрении!</h2>
-          <br>
-          <div class="sub-heading">
-           <p class="mb-4" >Мы ответи вам в ближайшее время.
-            </p>
-          </div>
-        </div>
-      </div>
-  {/if}
 
+
+       <div style="text-align: center; height: 600px;">
+        <br> <br> <br>
+                  <h2 class="heading" style="font-size: 3em; ">{$head_text}</h2>
+        <br>          
+                  <p    style="text-align: center; color: rgb(255, 255, 255); font-size: 2em;">{$message_text} </p>
+
+
+            <a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="index.php"><span
+                  class="pb_font-14 text-uppercase pb_letter-spacing-1">Вернуться на сайт</span></a>
+
+        </div>  
     </div>
   </section>
   <!-- END section -->

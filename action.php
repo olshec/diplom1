@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types=1);
+
 session_start();
 
 require_once  './vendor/autoload.php';
@@ -10,6 +11,15 @@ use PHPMailer\PHPMailer\Exception;
 
 // echo 'SESSION["captcha_code"] = '.$_SESSION["captcha_code"].'<br>';
 // echo "POST[captcha_code] = ".$_POST["captcha_code"].'<br>';
+
+function printResultMessage(string $headText, string $message)
+{
+    $smarty = new Smarty();
+    $smarty->assign('head_text', $headText);
+    $smarty->assign('message_text', $message);
+    // display it
+    $smarty->display('send-message.html');
+}
 
 if(isset($_SESSION["captcha_code"]) && isset($_POST["captcha_code"]) && 
     isset($_POST['email']) && isset($_POST['work_theme']) && isset($_POST['message'])){
@@ -34,7 +44,7 @@ if(isset($_SESSION["captcha_code"]) && isset($_POST["captcha_code"]) &&
             $mail->addAddress($to_email);
             // $mail->addAttachment($file_tmp, $file_name);
             $mail->Subject = 'Ваш диплом';
-            $mail->Body = 'Здравствуйте! Ваш заказ принят! Мы ответим вам в течение суток.';
+            $mail->Body = 'Здравствуйте! Ваша заявка на рассмотрении! Мы ответи вам в ближайшее время.';
             $mail->send();
     
             $mail = new PHPMailer(true);
@@ -44,27 +54,26 @@ if(isset($_SESSION["captcha_code"]) && isset($_POST["captcha_code"]) &&
             $mail->Body = $message;
             $mail->send();
     
-            echo 'Ваш заказ принят! Мы ответим вам в течение суток.';
+            printResultMessage('Ваша заявка на рассмотрении!', 'Мы ответи вам в ближайшее время.');
+            //echo 'Ваш заказ принят! Мы ответим вам в течение суток.';
             
             
         } catch (Exception $e) {
-            echo "Не удалось отправить сообщение. Ошибка: {$mail->ErrorInfo}";
+            printResultMessage('Не удалось отправить сообщение.', "Ошибка: {$mail->ErrorInfo}");
+            //echo "Не удалось отправить сообщение. Ошибка: {$mail->ErrorInfo}";
         }
     } else {
         $_SESSION["captcha_code"] = null;
-        echo '<br> Код введен неверно, попытайтесь еще раз.';
+        printResultMessage('Код введен неверно!', 'Попытайтесь еще раз.');
+       // echo '<br> Код введен неверно, попытайтесь еще раз.';
     }
     
     session_destroy();
 }
 else {
+    printResultMessage('Страница недоступна', '');
     //echo "Страница недоступна!";
-    // create object
-    $smarty = new Smarty();
-    
-    $smarty->assign('send_message', 'false');
-    // display it
-    $smarty->display('index.html');
+
     
 }
 
