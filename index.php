@@ -23,7 +23,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
   <title>Landing &mdash; Free One Page Bootstrap 4 Template by uicookies.com</title>
   <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
   <meta name="keywords"
-    content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
+    content="Помощь диплом, Писать диплом, Диплом тема, Заказать диплом, Диплом заказ, Написать диплом, Заказать написание диплома, Купить диплом, Диплом по программированию">
 
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:500,500i,600|Montserrat:200,300,500"
     rel="stylesheet">
