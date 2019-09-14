@@ -107,26 +107,13 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
               <input type="text" class="form-control pb_height-50 reverse" placeholder="Тема работы" name="work_theme"
               required=""  oninvalid="this.setCustomValidity('Пожалуйста введите тему работы')" oninput="setCustomValidity('')">
             </div>
-            
-<!--             <div class="form-group"> -->
-<!--                 <div class="pb_select-wrap"> -->
-<!--                   <select class="form-control pb_height-50 reverse" name="typeSelect" > -->
-<!--                     <option value="" selected>Тип работы</option> -->
-<!--                     <option value="bachelor">Бакалавр</option> -->
-<!--                     <option value="master">Магистратура</option> -->
-<!--                   </select> -->
-<!--                 </div> -->
-<!--               </div> -->
+
 
             <div class="form-group">
                 <textarea class="form-control pb_height-120 reverse" placeholder="Краткое описание" name="message"
                 value="Краткое описание" ></textarea>
-              <!-- <input type="text" class="form-control pb_height-50 reverse" placeholder="Краткое описание"> -->
             </div>
 
-
-
-     
             <div class="form-group">
               <input type="text" class="form-control pb_height-50 reverse" name="captcha_code" placeholder="Введите код на рисунке" 
                required=""   oninvalid="this.setCustomValidity('Пожалуйста введите код')" oninput="setCustomValidity('')">
@@ -282,7 +269,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
             <h3>Бакалаврская работа</h3>
             <span class="price"><sup>Р</sup>16 000</span>
             <p class="pb_font-15">Бакалаврские работы от 16 000. Точную цену уточняйте.</p>
-            <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue">Заказать</a></p>
+            <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue" id="done_order_bachelor">Заказать</a></p>
           </div>
         </div>
         <div class="col-md">
@@ -290,7 +277,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
             <h3>Магистерская диссертация</h3>
             <span class="price"><sup>Р</sup>20 000</span>
             <p class="pb_font-15">Магистерские диссертации от 20 000. Точную цену уточняйте.</p>
-            <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue">Заказать</a></p>
+            <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue" id="done_order_master">Заказать</a></p>
           </div>
         </div>
 
@@ -611,6 +598,37 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
 
 
   <script>
+
+  jQuery(function($){
+	  
+	  $('#done_order_bachelor').on('click.smoothscroll', function( e ){
+	  var hash    = this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+	  if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+	  var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+	  if( ! $target.length ) return;
+	  e.preventDefault();
+	  $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 400, 'swing', function(){
+	  window.location.hash = hash;
+	  });
+	  });
+
+	  $('#done_order_master').on('click.smoothscroll', function( e ){
+		  var hash    = this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+		  if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+		  var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+		  if( ! $target.length ) return;
+		  e.preventDefault();
+		  $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 400, 'swing', function(){
+		  window.location.hash = hash;
+		  });
+		  });
+	  
+	  });
+
+
+
+
+
 
 // 	heightFull = 1000;
 // 	heightMobile1 = 1300;
