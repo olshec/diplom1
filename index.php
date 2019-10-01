@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 session_start();
 
 use Gregwar\Captcha\CaptchaBuilder;
@@ -177,7 +177,6 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
           </div>
         </div>
         
-        
       </div>
     </div>
   </section>
@@ -192,9 +191,9 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
         <div class="col-lg-12 pl-md-5 pl-sm-0">
           <div class="row">
             <div class="col">
-              <h2>Портфолио</h2>
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;Портфолио</h2>
               <p class="pb_font-20">
-				Примеры выполнения типовых проектов вы можете посмотреть на <a href="https://github.com/diplom-website?tab=repositories" target="_blank">гитхабе</a>.
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Примеры выполнения типовых проектов вы можете посмотреть на нашем <a href="https://github.com/diplom-website?tab=repositories" target="_blank">гитхабе</a>.
 			    Эти приложения являются демонстрационным примером выполнения типовых заданий, работы клиентов мы никогда не показываем.
 			  </p>
             </div>
@@ -269,15 +268,15 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
           <div class="pb_pricing_v1 p-5 border text-center bg-white">
             <h3>Бакалаврская работа</h3>
             <span class="price"><sup>Р</sup>16 000</span>
-            <p class="pb_font-15">Бакалаврские работы от 16 000. Точную цену уточняйте.</p>
+            <p class="pb_font-15">Средняя цена бакалаврской работы 16.000 рублей.</p>
             <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue" id="done_order_bachelor">Заказать</a></p>
           </div>
         </div>
         <div class="col-md">
           <div class="pb_pricing_v1 p-5 border border-primary text-center bg-white">
             <h3>Магистерская диссертация</h3>
-            <span class="price"><sup>Р</sup>20 000</span>
-            <p class="pb_font-15">Магистерские диссертации от 20 000. Точную цену уточняйте.</p>
+            <span class="price"><sup>Р</sup>25 000</span>
+            <p class="pb_font-15">Средняя цена магистерской диссертации 25.000 рублей.</p>
             <p class="mb-0"><a href="#" role="button" class="btn btn-primary btn-shadow-blue" id="done_order_master">Заказать</a></p>
           </div>
         </div>
@@ -437,7 +436,7 @@ $_SESSION['captcha_code'] = $captcha->getPhrase();
                 aria-controls="pb_faq3" class="pb_font-22 py-4">Смогу ли я заказать доработку в случае необходимости?</a>
               <div id="pb_faq3" class="collapse" role="tabpanel">
                 <div class="py-3">
-                  <p>Да. Все доработки в рамках задания и мелкие поправки проводятся бесплатно. При необходимости внесения существенных изменений не обговоренных заранее, цена за работу будет пересмотренна.</p>
+                  <p>Да. Все доработки в рамках задания и мелкие поправки проводятся бесплатно. При необходимости внесения существенных изменений, не обговоренных заранее, цена за работу будет пересмотренна.</p>
                 </div>
               </div>
             </div>

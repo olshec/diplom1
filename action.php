@@ -44,7 +44,7 @@ if(isset($_SESSION["captcha_code"]) && isset($_POST["captcha_code"]) &&
             $mail->addAddress($to_email);
             // $mail->addAttachment($file_tmp, $file_name);
             $mail->Subject = 'Ваш диплом';
-            $mail->Body = 'Здравствуйте! Ваша заявка на рассмотрении! Мы ответи вам в ближайшее время.';
+            $mail->Body = 'Здравствуйте! Ваша заявка на рассмотрении! Мы ответим вам в ближайшее время.';
             $mail->send();
     
             $mail = new PHPMailer(true);
@@ -54,7 +54,7 @@ if(isset($_SESSION["captcha_code"]) && isset($_POST["captcha_code"]) &&
             $mail->Body = $message;
             $mail->send();
     
-            printResultMessage('Ваша заявка на рассмотрении!', 'Мы ответи вам в ближайшее время.');
+            printResultMessage('Ваша заявка на рассмотрении!', 'Мы ответим вам в ближайшее время.');
             //echo 'Ваш заказ принят! Мы ответим вам в течение суток.';
             
             
